@@ -1,0 +1,126 @@
+@import '~assets/sass/mixin.scss';
+html,body{
+    height: 100%;
+    background: #fff;
+    user-select: initial;
+}
+input,button,textarea{
+    outline: none;
+}
+input:disabled, textarea:disabled {
+    color: rgb(84, 84, 84);
+    background-color: rgb(235, 235, 228);
+    cursor: default;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: initial;
+}
+img,li,input{
+    vertical-align: top;
+}
+a, a:hover{
+    font-size: rem(26px);
+}
+input{
+    &::-webkit-input-placeholder{ 
+        color: #e0e0e0;
+    }
+}
+[class*="icon-"]{
+    font-family:"iconfont";
+    font-style:normal;
+}
+.vc-panel{
+    user-select: initial;
+}
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    height: 0;
+    content: ".";
+    visibility: hidden;
+    clear: both;
+}
+
+/* toast弱提示 */
+.toastPop{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0);
+    pointer-events: none;
+    .toastContent{
+        // position: absolute;
+        // transform: translate3d(-50%, -50%, 0);
+        // left: 50%;
+        // top: 50%;
+        max-width: 90%;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        line-height: 1.5;
+        font-size: rem(24px);
+        border-radius: rem(10px);
+        background: rgba($color: #000000, $alpha: .75);
+        color: #fff;
+    }
+}
+.cube-dialog-main{
+    border-radius: 4px;
+    .cube-dialog-btn,.cube-dialog-btn:hover{
+        font-size: rem(32px);
+    }
+}
+.cube-btn{
+    background: #506072;
+    height: rem(86px);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.cube-btn.cube-btn_disabled,.cube-btn.cube-btn_disabled.cube-btn_active,.cube-btn.cube-btn_disabled:active {
+    background: #99ABBA;
+}
+.cube-dialog-btn_highlight{ color: #506072;}
+.cube-picker-title-group .cube-picker-title{ margin: 0; }
+.toast{
+    .cube-popup-content{
+        background: rgba(0, 0, 0, .8);
+    }
+}
+.cube-toast-tip{ max-height: 100%; }
+.cube-toast-icon{ align-self: start; line-height: 1; }
+
+.AnimFadeIn{
+    animation: AnimFadeIn .4s forwards;
+}
+.AnimFadeOut{
+    animation: AnimFadeOut .4s forwards;
+}
+@keyframes AnimFadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes AnimFadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
